@@ -1,0 +1,9 @@
+import random
+lista = []
+
+quantidade = int(input("Quantos numeros quer gerar? "))
+for i in range(quantidade):
+    lista.append(random.randint(0, 100) )
+
+for item in lista:
+    print(item)
