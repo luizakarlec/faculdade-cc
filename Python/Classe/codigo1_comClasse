@@ -1,0 +1,18 @@
+from lista import Lista
+
+lista1 = []
+lista2 = []
+lista3 = []
+
+quantidade = 10
+
+trata_listas = Lista() #um objeto chamado trata_listas é criado do tipo lista
+
+trata_listas.popular(lista1, quantidade)
+trata_listas.exibir(lista1, "Lista 1")
+
+trata_listas.popular(lista2, quantidade)
+trata_listas.exibir(lista2, "Lista 2")
+
+trata_listas.popular(lista3, quantidade)
+trata_listas.exibir(lista3, "Lista 3")
