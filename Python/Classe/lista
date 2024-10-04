@@ -1,0 +1,25 @@
+import random
+
+class Lista:
+    '''
+    classe responsavel por tratar de listas com numeros inteiros
+    '''
+    
+    #metodo construtor
+    def __init__(self):
+        pass
+
+    def popular (self, lista, qtd):
+        '''
+        metodoque recebe uma lista de inteiros e a quantidade de numeros a serem gerados aleatoriamente na lista
+        '''
+        for i in range(qtd):
+            lista.append(random.randint(0, 100))
+
+    def exibir(self, lista, frase):
+        '''
+        metodo que exibe o conteudo de uma lista de inteiros e exibe o cabeçalho
+        '''
+        print(frase)
+        for i in lista:
+            print(i)
