@@ -1,3 +1,7 @@
+/*
+Calcular o produto escalar de 2 vetores.
+*/
+
 #include <stdio.h>
 int main(){
     int a[4] = {1, 2, 3, 4};
