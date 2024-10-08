@@ -14,7 +14,8 @@ int main(){
     
     //laço para posicionar pf no \0
     for( ;*p2 != '\0'; p2++);
-    
+
+    //colocar na ultima letra
     p2--;
     
     //conferir palindromo
