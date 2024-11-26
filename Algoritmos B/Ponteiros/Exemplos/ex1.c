@@ -1,5 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 int main(){
+    system("cls");
+
     int x, y, *P1, *P2;
     x = 10;
     P1 = &x;
