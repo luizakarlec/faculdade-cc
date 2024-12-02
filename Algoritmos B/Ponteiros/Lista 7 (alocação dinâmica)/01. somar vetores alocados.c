@@ -51,5 +51,9 @@ int main(){
 
     somarVetores(v1, v2, tam);
 
+    free(v1);
+    free(v2);
+    free(soma);
+
     return 0;
 }
