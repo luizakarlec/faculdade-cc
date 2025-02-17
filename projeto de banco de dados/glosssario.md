@@ -1,5 +1,5 @@
 1) Banco de dados
-  É um repositório de dados organizados de maneira estruturada para facilitar o acesso, manipulação e atualização.
+    É um repositório de dados organizados de maneira estruturada para facilitar o acesso, manipulação e atualização.
   Bancos de dados relacionais: os dados são organizados principalmente em tabelas com relaçoes definidas.
   Bancos de dados não relacionais:  os dados podem ser organizados de diversas formas, como documentos, grafos ou pares chave-valor ou tabelas, dependendo do modelo de dados adotado.
 
