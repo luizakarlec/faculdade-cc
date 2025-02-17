@@ -24,3 +24,6 @@
   Microserviços é uma abordagem arquitetural para o desenvolvimento de software em que uma aplicação é dividida em pequenos serviços independentes.
   Cada microserviço é responsável por uma funcionalidade específica. 
   Tecnologia hterogeneas, não precisam estar na mesma linguagem.
+
+- SaaS
+  SaaS é a sigla em inglês para "Software as a Service", que significa "software como serviço" em português. É um modelo de negócio que comercializa softwares como serviços, em vez de produtos. 
