@@ -5,12 +5,17 @@
 
 - Sistema gerenciador de banco de dados (SGDB)
   O SGBD é um SOFTWARE responsável por gerenciar e fornecer ferramentas para criação, manipulação e manutenção de bancos de dados.
+  - Criação do banco
+  - Manipulaçao dos dados
+  - Integridade dos dados
+  - Segurança e controle de acesso (política de backup = mais importante)
+  SQL
 
 - Banco de dados e a relação com sistema gerenciador de banco de dados (sgbd)
-  Banco de dados é o CONTEÚDO, enquanto SGBD é o sistema que permite manipular e organizar esse conteúdo.
+  Banco de dados é o CONTEÚDO, enquanto SGBD é o SISTEMA que permite manipular e organizar esse conteúdo.
 
 - Modelo relacional de banco de dados
-  O modelo relacional é, fundamentalmente, uma forma de organização de dados. É o modelo principal usado em banco de dados relacionais, com base em tabelas, chaves e relacionamentos.
+  O modelo relacional é, fundamentalmente, uma forma de organização dos dados. É o modelo principal usado em banco de dados relacionais, com base em tabelas, chaves e relacionamentos.
   Tabelas (ou relações): São as unidades fundamentais de armazenamento no modelo relacional. Possui linhas (tuplas) e colunas (atributos).
   Chaves: São usadas para garantir a integridade e a unicidade dos dados, além de estabelecer relações entre diferentes tabelas.
   Relacionamentos: O modelo relacional permite estabelecer relacionamentos entre as tabelas usando chaves estrangeiras.
@@ -18,3 +23,4 @@
 - Microserviço
   Microserviços é uma abordagem arquitetural para o desenvolvimento de software em que uma aplicação é dividida em pequenos serviços independentes.
   Cada microserviço é responsável por uma funcionalidade específica. 
+  Tecnologia hterogeneas, não precisam estar na mesma linguagem.
