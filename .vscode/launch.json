@@ -2,6 +2,76 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "SituacaoEleitor",
+      "request": "launch",
+      "mainClass": "revisao_logica.SituacaoEleitor",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "Multiplos",
+      "request": "launch",
+      "mainClass": "revisao_logica.Multiplos",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "MaiorNumero",
+      "request": "launch",
+      "mainClass": "revisao_logica.MaiorNumero",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "PlanoCartesiano",
+      "request": "launch",
+      "mainClass": "revisao_logica.PlanoCartesiano",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "Media",
+      "request": "launch",
+      "mainClass": "revisao_logica.Media",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "ParOuImpar",
+      "request": "launch",
+      "mainClass": "revisao_logica.ParOuImpar",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "Odometro",
+      "request": "launch",
+      "mainClass": "revisao_logica.Odometro",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "QuatroOperacoes",
+      "request": "launch",
+      "mainClass": "revisao_logica.QuatroOperacoes",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "Principal",
+      "request": "launch",
+      "mainClass": "Principal",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
+      "name": "Principal",
+      "request": "launch",
+      "mainClass": "projetoo.Principal",
+      "projectName": ""
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
