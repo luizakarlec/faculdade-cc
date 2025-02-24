@@ -27,3 +27,13 @@
 
 - SaaS
   SaaS é a sigla em inglês para "Software as a Service", que significa "software como serviço" em português. É um modelo de negócio que comercializa softwares como serviços, em vez de produtos. 
+
+ENGENHARIA
+- Modelar
+  É uma atividade mais abstrata e conceitual que visa representar a estrutura e comportamento do sistema ou banco de dados.
+  Levantamento de requisitos, identificar os dados que vão ser armazenados.
+  Modelar -> Conceitual -> Lógico -> Físico --> Projetar
+  Modelo conceitual de Entidade-Relacionamento, modelo ER, diagrama ER.
+
+- Projetar
+  É a parte prática de detalhar a implementação dessa modelagem, considerando as tecnologias e estruturas reais para construir a solução.
