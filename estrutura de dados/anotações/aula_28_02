@@ -1,0 +1,33 @@
+arrumar dps
+
+ESTRUTURA DE DADOS
+- físicas:
+
+- abstratas (COLEÇÕES):
+    - algoritmos de gestão de memória (CRUD)
+      - inserção (add, Add, append, push_back)
+      - percurso
+          - exibir
+          - contar/definir tamanho
+          - localizar
+          - remover (delete, Delete, delete, delete)
+      - atualização (update)
+      - remoção
+
+
+- lineares  
+    - listas: todas as operações - armazenar e exibir
+    (relatórios)
+          ArrayList, List, [], vector
+    - pilhas: Last In, First Out (LIFO) - somente operações de inserção e remoção no topo - operações no topo
+          Stack
+            - inserção: push ou add
+            - remoção: pop ou delete
+    - filas: First In, First Out (FIFO) - somente operações de inserção (cauda ou fim) e remoção (cabeça ou inicio) - prioridade
+            - inserção: add ou append
+            - remoção: delete ou remove
+  
+- não lineares
+    - árvores: todas as operações - busca
+          Tree
+    - grafos: muda completamenre o foco - mapear pontos ou definir rotas (melhor caminho), como em mapas rodoviarios, infraestrutura tecnologica, fases e jogos.
