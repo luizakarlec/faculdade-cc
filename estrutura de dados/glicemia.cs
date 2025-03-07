@@ -51,7 +51,7 @@ if (quantidade %2 == 0)
 }
 Console.WriteLine("MEDIANA = " + mediana);
 
-//moda (mostra apenas uma)
+//moda (mostra apenas uma), próxima aula vamos aprender mais
 int valorAvaliado;
 int ocorrenciasAvaliado;
 int moda = 0;
