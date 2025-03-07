@@ -20,5 +20,6 @@ public class ParOuImpar {
         else 
             System.out.println("O numero eh impar!");
 
+        teclado.close();
     }
 }

@@ -32,6 +32,7 @@ public class Media {
         if(d > media)
             System.out.println(d);
 
+        teclado.close();
     }
 
 }

@@ -46,6 +46,7 @@ public class MaiorNumero {
 
         System.out.println("Ordem crescente: "+ a +", "+ b +", "+ c);
 
+        teclado.close();
     }
     
 }

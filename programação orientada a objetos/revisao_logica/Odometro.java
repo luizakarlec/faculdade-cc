@@ -25,6 +25,6 @@ public class Odometro {
         System.out.println("Media de consumo: "+mediaConsumo);
         System.out.println("Lucro liquido: "+lucro);
 
-
+        teclado.close();
     }
 }

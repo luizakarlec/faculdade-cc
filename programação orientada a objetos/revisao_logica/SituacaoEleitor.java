@@ -21,6 +21,7 @@ public class SituacaoEleitor {
         else
             System.out.println("Voto obrigatorio");
 
+        teclado.close();
     }
     
 }

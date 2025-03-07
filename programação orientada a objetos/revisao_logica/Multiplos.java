@@ -32,6 +32,7 @@ public class Multiplos {
             System.out.println("Os numeros sao iguais, e multiplos");
         }
 
+        teclado.close();
     }
     
 }

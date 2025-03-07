@@ -30,6 +30,8 @@ public class PlanoCartesiano {
         else 
             System.out.println("O ponto esta no quarto quadrantes");
 
+
+        teclado.close();
     }
     
 }

@@ -43,21 +43,29 @@ public class exercicio {
         lista.sort(null);
 
         //exibir
-        System.out.println("Exibindo por objetos..");
-        System.out.println("Total de " + lista.size() );
+        System.out.println("\nExibindo por objetos..");
+        System.out.println("Lista contem " + lista.size() + " nomes");
         for (String i : lista){
             System.out.println(i);
         }
 
         //remover um nome
         String nomeRemover;
-        System.out.println("Escolha um nome para remover: ");
-        nomeRemover = teclado.nextLine();
+        System.out.print("\nEscolha um nome para remover: ");
+        nomeRemover = teclado.nextLine().toUpperCase();
 
-        if (lista.remove((Integer)15))
-            System.out.println("Numero localizado e excluido");
+        if (lista.remove(nomeRemover))
+            System.out.println("Nome localizado e excluido");
         else
-            System.out.println("Numero não localizado");
+            System.out.println("Nome não localizado");
+
+        //exibir
+        System.out.println("\nExibindo por objetos..");
+        System.out.println("Lista contem " + lista.size() + " nomes"); //arrumar
+        for (String i : lista){
+            System.out.println(i);
+        }
+
 
 
 

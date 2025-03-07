@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "exercicio",
+      "request": "launch",
+      "mainClass": "exercicio",
+      "projectName": "faculdade-cc_80659ed7"
+    },
+    {
+      "type": "java",
       "name": "SituacaoEleitor",
       "request": "launch",
       "mainClass": "revisao_logica.SituacaoEleitor",

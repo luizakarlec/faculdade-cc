@@ -85,5 +85,7 @@ public class Principal {
 			default:
 				System.out.println("INVALIDO!");
 		}
+
+		teclado.close();
 	}
 }
