@@ -4,10 +4,6 @@ Assim como no primeiro codigo: i) não podera haver nomes duplicados; ii) ao fin
 iii) o código deve permitir que o usuário digite um nome para pesquisa e o programa exclua esse nome da lista;
 iv) exiba novamente a lista.
 obs: em java, como colocar em maiusculo um nome antes de armazena-lo na lista.
-
-Tarefa:
-    - diferença em java de Vector, ArrayList e LinkedList.
-    - Construir exemplos;
 */
 
 import java.util.Scanner;
