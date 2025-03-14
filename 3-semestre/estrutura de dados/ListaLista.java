@@ -13,7 +13,7 @@ public class ListaLista{
         lista1.add(895);
         lista1.add(644);
         listaPrincipal.add(lista1);
-
+       
         lista2.add(26);
         lista2.add(14);
         lista2.add(39);
@@ -29,7 +29,7 @@ public class ListaLista{
         }
 
         //EXIBINDO A LISTA INTEIRA DA PRIMEIRA POSIÇÃO
-        System.out.println("Exibindo a lista da primeira posição");
+        System.out.println("\nExibindo a lista da primeira posição");
         System.out.println(listaPrincipal.get(0));
 
         //EXIBINDO ITEM A ITEM A LISTAPRINCIPAL NA PRIMERIA POSIÇÃO
@@ -39,9 +39,12 @@ public class ListaLista{
         }
 
         //EXIBINDO OS PARES DA LISTAPRINCIPAL, ANALISANDO ITEM A ITEM DAS LISTAS INTERNAS
+        System.out.println("\nExibindo os pares da listaPrincipal");
         for (ArrayList lista : listaPrincipal) {
             for (Object i: lista){
-                System.out.println(lista);
+                if ((int)i % 2 == 0){
+                    System.out.println(i);
+                }
             }
         }
     }
