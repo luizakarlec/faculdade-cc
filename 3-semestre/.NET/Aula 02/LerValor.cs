@@ -1,4 +1,4 @@
-namespace PrimeiroProjeto
+namespace LerValor
 {
     internal class Program
     {
