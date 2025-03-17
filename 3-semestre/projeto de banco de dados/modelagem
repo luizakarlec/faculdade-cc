@@ -1,4 +1,4 @@
-# Modelagem
+# Modelagem 1
 
 * = chave primária
 () = possivel NULL
@@ -49,5 +49,10 @@ Secretaria_Processador(secretaria, processador)
 Engenheiro_Projeto(engenheiro, projeto)
 2 100
 2 102
+
+
+# Modelgem 2
+
+
 
 
