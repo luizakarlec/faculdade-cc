@@ -1,0 +1,53 @@
+# Modelagem
+
+* = chave primária
+() = possivel NULL
+
+Departamento (*idDepartamento*, nome)
+ProcessadorTexto (*idProTexto*, descricao)
+Projeto (*idProjeto, descricao)
+Tipo (*idTipo*, descricao)
+Empregado (*idEmpregado*, nome, *CPF*, tipo, (CREA), (gerente), departamento)
+    tipo referencia Tipo
+    gerente referencia Empregado
+    departamento referencia Departamento
+Secretaria_ProcessadorTexto (*secretaria*, *processador*) //chave orimaria é a combinação dos dois atributos
+    secretaria referencia Empregado
+    processador referencia ProcessadorTexto
+Engenheiro_Projeto (*engenheiro*, *projeto*)
+    engenheiro referencia Empregado
+    projeto referencia Projeto
+
+Departamento(idDepertamento, nome)
+1 Ciencia da Computação
+2 Sistemas de Informação
+3 Jogos Digitais
+
+ProcessadorTexto(idProcessador, descricao)
+10 Word MS
+20 Star Office
+30 Libre Office
+
+Projeto(idProjeto, descricao)
+100 Longevos
+102 Raquetada dos Amigos
+
+Tipo(idTipo, descricao)
+1001 Gerente
+1002 Secretaria
+1003 Engenheiro
+
+Empregado(idEmpregado, nome, CPF, tipo, CREA, gerente, departamento)
+1 Alexandre, cpf1212, 1001, NULL, NULL, 1
+2 Pedro, cpf24234, 1003, crea23234, 1, 1
+3 Eric, cpf6542, 1002, NULL, 1, 1
+
+Secretaria_Processador(secretaria, processador)
+3 10
+3 20
+
+Engenheiro_Projeto(engenheiro, projeto)
+2 100
+2 102
+
+
