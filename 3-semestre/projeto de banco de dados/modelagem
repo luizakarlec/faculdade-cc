@@ -53,6 +53,32 @@ Engenheiro_Projeto(engenheiro, projeto)
 
 # Modelgem 2
 
+Fornecedor(*idFornecedor*, nome)
 
+Lote(*idLote*, descricao, fornecedor)
+    fornecedor referencia Fornecedor
 
+Fabricande(*idFabricante*, nome)
 
+Fabricante_Fornecedor(*fabricante*, *fornecedor*, *data*)
+    fabricante referencia Fabricante
+    fornecedor referencia Fornecedor
+
+TipoProduto(*idTipoProduto*, nome)
+
+Produto(*idProduto*, nome, dataF, dataV, tipo, preco, precisaReceita, fabricante)
+    tipo referencia TipoProduto
+    fabricante referencia Fabricante
+
+Produto_Lote(*idProduto_Lote*, lote, produto)
+    lote referencia Lote
+    produto referencia Produto
+
+Receita(*idReceita*, data, medico)
+
+Venda(*idVenda*, notaFiscal, data)
+
+Produto_Venda(*idProduto_Venda*, produto, venda, receita)
+    venda referencia Venda
+    produto referencia produto
+    receita referencia Receita
