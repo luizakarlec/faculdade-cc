@@ -1,8 +1,5 @@
 /*
 2) Programa em C/C++ que gere n números aleatórios e os armazene um abaixo do outro em um arquivo dados.txt
-
-3) Programa em C/C++ que leia o arquivo dados.txt vom números inteiros, um abaixo do outro, e os armazene em um vetor. 
-Contudo, os números repetidos devem ser ignorados.
 */
 
 #include<stdio.h>
