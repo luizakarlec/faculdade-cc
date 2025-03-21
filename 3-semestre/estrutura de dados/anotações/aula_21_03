@@ -1,0 +1,11 @@
+Estruturas de Dados
+    - abstratas - algoritmos de manipulação + coleções
+        - lista
+        - pilha
+        - fila
+        - árvore
+        - grafo
+
+List, Set, Map 
+    - List<Integer> lista = new ArrayList<>();
+    - Map<String,String> dicionario = new HashMap<>();
