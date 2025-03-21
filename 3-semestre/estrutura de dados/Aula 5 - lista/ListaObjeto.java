@@ -40,5 +40,6 @@ public class ListaObjeto {
         for (Aluno aluno : alunos){
             System.out.println(aluno);
         }
+        teclado.close();
     }
 }
