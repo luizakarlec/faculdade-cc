@@ -51,13 +51,14 @@ public class EmailObjeto {
             } 
             System.out.println("E-mail criado: " + email);
 
-            //adionar lista
+            //adicionar lista
             tmp = new Aluno(nomeCompleto, email);
             alunos.add(tmp);
 
             System.out.print("Adicionar mais um nome? (0 - não | 1 - sim) ");
             continuar = teclado.nextInt();
             teclado.nextLine();
+
         }while (continuar == 1);
 
         //exibir lista
