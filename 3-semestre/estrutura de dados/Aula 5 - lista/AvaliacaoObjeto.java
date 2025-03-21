@@ -12,7 +12,7 @@ class Aluno {
     }
 }
 
-public class EmailObjeto {
+public class AvaliacaoObjeto {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         
