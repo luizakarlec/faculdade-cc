@@ -11,8 +11,8 @@
   - Segurança e controle de acesso (política de backup = mais importante)
   SQL
 
-> OBS
-Banco de dados e a relação com sistema gerenciador de banco de dados (sgbd)
+> OBS  
+Banco de dados e a relação com sistema gerenciador de banco de dados (sgbd)  
 Banco de dados é o CONTEÚDO, enquanto SGBD é o SISTEMA que permite manipular e organizar esse conteúdo.
 
 ### Modelo relacional de banco de dados
