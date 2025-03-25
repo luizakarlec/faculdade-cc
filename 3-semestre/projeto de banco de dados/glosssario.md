@@ -33,19 +33,9 @@ Banco de dados é o CONTEÚDO, enquanto SGBD é o SISTEMA que permite manipular 
 ### Modelar
   É uma atividade mais abstrata e conceitual que visa representar a estrutura e comportamento do sistema ou banco de dados.  
   Levantamento de requisitos, identificar os dados que vão ser armazenados.  
-  Modelar -> Conceitual -> Lógico -> Físico --> Projetar  
+  Modelar --> Conceitual -> Lógico -> Físico --> Projetar  
   Modelo conceitual de Entidade-Relacionamento, modelo ER, diagrama ER.
 
 ### Projetar
   É a parte prática de detalhar a implementação dessa modelagem, considerando as tecnologias e estruturas reais para construir a solução.
-
-
-# OI
-- Modelagem Conceitual
-1) Identificar entidades
-2) Identificar atributos
-  - Identificador
-3) Identificar relacionamentos
-  - Qual entidade se relaciona com qual(is)
-4) Mapear cardinalidade
 
