@@ -26,10 +26,10 @@ Conceitual -> Lógica -> Física
       - n..n -> cria-se uma terceira tabela onde as chaves primárias das duas tabelas vão se unir/juntar na tabela criada  
 
 ### Modelagem física
-- tipos dos atributos  
-- restrições:  
-      - atributos  
-      - cardinalidade  
-      - duplicidade - automática ao se definir uma chave primária  
-      - dependência - chave estrangeira  
-      - delete on: cascade ou restrict  
+  - tipos dos atributos
+  - restrições:
+    - atributos
+    - cardinalidade
+    - duplicidade - automática ao se definir uma chave primária
+    - dependência - chave estrangeira
+      - delete on: cascade ou restrict 
