@@ -11,9 +11,9 @@
   - Segurança e controle de acesso (política de backup = mais importante)
   SQL
 
-> [!OBS]
-- Banco de dados e a relação com sistema gerenciador de banco de dados (sgbd)
-  Banco de dados é o CONTEÚDO, enquanto SGBD é o SISTEMA que permite manipular e organizar esse conteúdo.
+> OBS
+Banco de dados e a relação com sistema gerenciador de banco de dados (sgbd)
+Banco de dados é o CONTEÚDO, enquanto SGBD é o SISTEMA que permite manipular e organizar esse conteúdo.
 
 ### Modelo relacional de banco de dados
   O modelo relacional é, fundamentalmente, uma forma de organização dos dados. É o modelo principal usado em banco de dados relacionais, com base em tabelas, chaves e relacionamentos.
@@ -31,9 +31,9 @@
 
 ## ENGENHARIA
 ### Modelar
-  É uma atividade mais abstrata e conceitual que visa representar a estrutura e comportamento do sistema ou banco de dados.
-  Levantamento de requisitos, identificar os dados que vão ser armazenados.
-  Modelar -> Conceitual -> Lógico -> Físico --> Projetar
+  É uma atividade mais abstrata e conceitual que visa representar a estrutura e comportamento do sistema ou banco de dados.  
+  Levantamento de requisitos, identificar os dados que vão ser armazenados.  
+  Modelar -> Conceitual -> Lógico -> Físico --> Projetar  
   Modelo conceitual de Entidade-Relacionamento, modelo ER, diagrama ER.
 
 ### Projetar
