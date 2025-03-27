@@ -3,3 +3,6 @@
 
 # Ignorar a pasta onde os executáveis estão sendo salvos
 output/
+
+# Ignorar arquivos de classe
+*.class
