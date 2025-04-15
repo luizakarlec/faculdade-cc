@@ -1,4 +1,4 @@
-package pacote;
+package exemplo;
 
 public class Principal {
 
