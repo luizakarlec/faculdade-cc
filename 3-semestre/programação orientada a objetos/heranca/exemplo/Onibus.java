@@ -1,4 +1,4 @@
-package pacote;
+package exemplo;
 
 public class Onibus extends Carro{
 	//classe Onibus extende Carro
