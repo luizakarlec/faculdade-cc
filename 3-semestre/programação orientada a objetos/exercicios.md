@@ -16,11 +16,23 @@
 > O comportamento é representado pelos seus métodos
 
 ### 2) Qual a diferença entre método e construtor em uma classe? Dê um exemplo.
+O construtor é um dos métodos da classe que é utilizado para inicializar uma classe. Quando nenhum construtor esta explicito o compilador fornece automáticamente um construtor vazio.
+Método ex: Get() e Set()
+Método Construtor: public Carro();
 
 ### 3) O que são modificadores de acesso em Java? Cite e explique brevemente os principais.
+Eles controlam a visibilidade e acessibilidade das classes, métodos e atributos.
+Public torna visivel em qualquer lugar.
+Private torna visivel apenas na mesma classe.
+Protected torna visivel apenas no mesmo pacote.
 
 ### 4) Qual a diferença entre os tipos de dados String, int e boolean? Dê um exemplo de uso de cada um.
+String representa uma palavra um frase. ex: String nome.
+int representa um número inteiro. ex: int idade.
+boolean representa apenas verdadeiro ou falso (0 ou 1). ex: bool alugado.
 
 ### 5) Explique o que é e para que serve o método toString() em uma classe.
+O método toString() é usado na saída de dados, retorna uma representação em string do objeto.
 
 ### 6) Descreva o que acontece quando se tenta acessar um atributo privado diretamente fora da classe. Como é possível acessá-lo de forma correta?
+Não vai funcionar. Para acessá-lo é preciso usar os métodos get e set.
