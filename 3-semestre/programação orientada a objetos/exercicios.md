@@ -2,15 +2,15 @@
 
 ### 1) Explique os seguintes conceitos de POO em Java:
 
-- Classe: Uma estrutura que abstrai um conjunto de objetos com características similares. A classe descreve as características e funcionalidades dos objetos. Representa um conjunto de objetos.
+- Classe: Uma estrutura que abstrai um conjunto de objetos com características similares. A classe descreve as características e funcionalidades dos objetos. Representa um **conjunto de objetos**.
   
-- Objeto: O objeto é a instância de uma classe. É possível ter vários objetos a partir de uma classe.
+- Objeto: O objeto é a **instância de uma classe**. É possível ter vários objetos a partir de uma classe.
 
-- Atributo: Variáveis na linguagem estruturada. Características do objeto.
+- Atributo: **Variáveis** na linguagem estruturada. **Características do objeto**.
 
-- Método: Funções na linguagem estruturada. Funcionalidades do objeto.
+- Método: **Funções** na linguagem estruturada. **Funcionalidades do objeto**.
 
-- Encapsulamento: É o empacotamento dos atributos e métodos de uma classe. Podendo ser publico, privado e protegido.
+- Encapsulamento: É o **empacotamento** dos atributos e métodos de uma classe. Podendo ser publico, privado e protegido.
 
 > O estado de um objeto é representado por seus atributos  
 > O comportamento é representado pelos seus métodos
