@@ -2,15 +2,15 @@
 
 1) Explique os seguintes conceitos de POO em Java:
 
-a) Classe
+- Classe
 
-b) Objeto
+- Objeto
 
-c) Atributo
+- Atributo
 
-d) Método
+- Método
 
-e) Encapsulamento
+- Encapsulamento
 
 2) Qual a diferença entre método e construtor em uma classe? Dê um exemplo.
 
