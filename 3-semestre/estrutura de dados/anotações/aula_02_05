@@ -1,0 +1,35 @@
+Estruturas de Dados
+    - abstratas
+        - lineares
+            - lista
+            - dicionário
+            - pilha
+            - fila
+        - operações clássicas das ED lineares:
+            - add (Add, append) | push,Push (pilha) | offer, Enqueue (fila)
+            - remove (Remove, remove) pop,Pop (pilha) | poll, Dequeue (fila)
+            - contains (Contains, in)
+            - isEmpty (Empty, empty)
+            - size (Count, len)
+            - pilha/fila -> peek
+        - ED lineares em java, c# e python são baseadas na teoria da orientação a objetos
+            - terceirização de serviços
+                - há objetos e classes que atendem serviços solicitados
+
+        - Contudo, há implementações dessas estruturas sem se basear na orientação a objetos
+            - são implementações procedurais, geralmente em C para atender necessidades 
+              em dispositivos ou recursos computacionais com baixo recurso (processador, memória, ... )
+
+            - possibilidade de trabalhar com estruturas de dados e suas operações via programação própria:
+                - criar a estrutura de dados usando struct em C
+                - criar todos os métodos: 
+                 - inserir
+                 - remover
+                 - estaContido
+                 - estaVazio
+                 - tamanho
+
+            - alocação dinâmica de memória
+                - solicitar (SO) e usar memória em tempo de execução
+                    - malloc - solicitar
+                    - free - liberar
