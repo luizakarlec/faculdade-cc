@@ -22,10 +22,26 @@ int main() {
     cout << "Total de nos: " << contarNodos(arvore) << endl;
     exibirArvore(0, arvore);
  
+    // cout << "Digite numero para pesquisa/delecao: ";
+    // cin >> numero;
+ 
+    // cout << "Localizado? " << localizarNivel(numero, arvore) << endl;
+ 
+ 
+    // cout << "Total de folhas: " << contarFolhas(arvore) << endl;
+    // exibirFolhas(arvore);
+ 
     cout << "Digite numero para pesquisa/delecao: ";
     cin >> numero;
  
-    cout << "Localizado? " << localizarNivel(numero, arvore) << endl;
+    arvore = remover(numero, arvore);
+   
+    cout << "Total de nos apos remocao: " << contarNodos(arvore) << endl;
+    exibirArvore(0, arvore);
+ 
+    cout << endl;
+ 
+   
  
     return 1;
 }
