@@ -1,4 +1,4 @@
-# 4_Semestre
+# 4-semestre
 Matérias cursadas no 4° semestre do curso de Ciência de Computação - 2025/2
 
 * Implementação de Banco de Dados - Professor: Herysson Rodrigues Figueiredo
