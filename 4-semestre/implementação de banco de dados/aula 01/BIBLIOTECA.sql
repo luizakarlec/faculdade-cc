@@ -1,0 +1,134 @@
+CREATE DATABASE BIBLIOTECA;
+USE BIBLIOTECA;
+
+/* Lógico_1: */
+CREATE TABLE LIVRO (
+ isbn VARCHAR(50) PRIMARY KEY,
+ titulo VARCHAR(100),
+ ano int,
+ FK_EDITORA_Id INT,
+ FK_CATEGORIA_codigo INT
+);
+
+CREATE TABLE AUTOR (
+ Id INT PRIMARY KEY IDENTITY,
+ nome VARCHAR(100),
+ nacionalidade VARCHAR(50)
+);
+
+CREATE TABLE CATEGORIA (
+ codigo INT PRIMARY KEY IDENTITY,
+ descricao VARCHAR(50)
+);
+
+CREATE TABLE EDITORA (
+ Id INT PRIMARY KEY IDENTITY,
+ nome VARCHAR(100)
+);
+
+CREATE TABLE LIVRO_AUTOR_ESCRITO (
+ FK_LIVRO_isbn VARCHAR(50),
+ FK_AUTOR_Id INT
+);
+
+ALTER TABLE LIVRO ADD CONSTRAINT FK_LIVRO_2
+ FOREIGN KEY (FK_EDITORA_Id)
+ REFERENCES EDITORA (Id)
+ ON DELETE CASCADE;
+
+ALTER TABLE LIVRO ADD CONSTRAINT FK_LIVRO_3
+ FOREIGN KEY (FK_CATEGORIA_codigo)
+ REFERENCES CATEGORIA (codigo)
+ ON DELETE CASCADE;
+
+ALTER TABLE LIVRO_AUTOR_ESCRITO ADD CONSTRAINT
+FK_LIVRO_AUTOR_ESCRITO_1
+ FOREIGN KEY (FK_LIVRO_isbn)
+ REFERENCES LIVRO (isbn);
+
+ALTER TABLE LIVRO_AUTOR_ESCRITO ADD CONSTRAINT
+FK_LIVRO_AUTOR_ESCRITO_2
+ FOREIGN KEY (FK_AUTOR_Id)
+ REFERENCES AUTOR (Id);
+
+INSERT INTO CATEGORIA (descricao) VALUES ('Literatura Juvenil');
+
+SELECT C.codigo, C.descricao
+FROM CATEGORIA AS C
+WHERE C.descricao LIKE '%Juve%';
+
+INSERT INTO CATEGORIA (descricao) VALUES ('Ficção Científica');
+INSERT INTO CATEGORIA (descricao) VALUES ('Humor');
+INSERT INTO EDITORA (nome) VALUES ('Rocco');
+INSERT INTO EDITORA (nome) VALUES ('Wmf Martins Fontes');
+INSERT INTO EDITORA (nome) VALUES ('Casa da Palavra');
+INSERT INTO EDITORA (nome) VALUES ('Belas Letras');
+INSERT INTO EDITORA (nome) VALUES ('Matrix');
+INSERT INTO AUTOR (nome, nacionalidade) VALUES ('J.K. Rowling', 'Inglaterra');
+INSERT INTO AUTOR (nome, nacionalidade) VALUES ('Clive Staples Lewis',
+'Inglaterra');
+INSERT INTO AUTOR (nome, nacionalidade) VALUES ('Affonso Solano', 'Brasil');
+INSERT INTO AUTOR (nome, nacionalidade) VALUES ('Marcos Piangers', 'Brasil');
+INSERT INTO AUTOR (nome, nacionalidade) VALUES ('Ciro Botelho - Tiririca',
+'Brasil');
+INSERT INTO AUTOR (nome, nacionalidade) VALUES ('Bianca Mól', 'Brasil');
+
+select * from editora;
+select * from categoria;
+select * from autor;
+
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('67347346', 'Harry Potter e A Pedra Filosofal', 2000, 1, 1);
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('97647365', 'As Crônicas de Nárnia', 2009, 2, 1);
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('1734826', 'O Espadachim de Carvão', 2013, 3, 2);
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('12365477', 'O Papai É Pop', 2015, 4, 3);
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('34235896', 'Pior Que Tá Não Fica', 2015, 5, 3);
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('87365482', 'Garota Desdobrável', 2015, 3, 1);
+INSERT INTO LIVRO (isbn, titulo, ano, FK_EDITORA_Id, FK_CATEGORIA_codigo)
+VALUES ('35789388', 'Harry Potter e o Prisioneiro de Azkaban', 2000, 1, 1);
+
+INSERT INTO LIVRO_AUTOR_ESCRITO (FK_LIVRO_isbn, FK_AUTOR_Id)
+VALUES ('67347346', 1),
+ ('97647365', 2),
+ ('1734826', 3),
+ ('12365477', 4),
+ ('34235896', 5),
+ ('87365482', 6),
+ ('35789388', 1);
+
+-- 7
+SELECT *
+FROM LIVRO, LIVRO_AUTOR_ESCRITO, AUTOR
+WHERE LIVRO.isbn = LIVRO_AUTOR_ESCRITO.FK_LIVRO_isbn and
+ LIVRO_AUTOR_ESCRITO.FK_AUTOR_Id = AUTOR.id
+ORDER BY titulo;
+
+-- 8
+SELECT *
+FROM LIVRO, LIVRO_AUTOR_ESCRITO, AUTOR
+WHERE LIVRO.isbn = LIVRO_AUTOR_ESCRITO.FK_LIVRO_isbn and
+ LIVRO_AUTOR_ESCRITO.FK_AUTOR_Id = AUTOR.id
+ORDER BY nome;
+
+-- 9
+SELECT *
+FROM LIVRO, LIVRO_AUTOR_ESCRITO, AUTOR, CATEGORIA
+WHERE descricao = 'Literatura Juvenil' and
+ LIVRO.isbn = LIVRO_AUTOR_ESCRITO.FK_LIVRO_isbn and
+ LIVRO_AUTOR_ESCRITO.FK_AUTOR_Id = AUTOR.id and
+ CATEGORIA.codigo = LIVRO.FK_CATEGORIA_codigo
+ORDER BY ano;
+
+-- 10
+SELECT *
+FROM LIVRO, LIVRO_AUTOR_ESCRITO, AUTOR, CATEGORIA
+WHERE (descricao = 'Humor' or descricao = 'Ficção Científica') and
+ (ano >= 2000 and ano <= 2015) and
+ LIVRO.isbn = LIVRO_AUTOR_ESCRITO.FK_LIVRO_isbn and
+ LIVRO_AUTOR_ESCRITO.FK_AUTOR_Id = AUTOR.id and
+ CATEGORIA.codigo = LIVRO.FK_CATEGORIA_codigo;
