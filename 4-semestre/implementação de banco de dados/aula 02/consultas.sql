@@ -1,0 +1,146 @@
+-- DISTINCT
+SELECT DISTINCT F.Salario
+FROM FUNCIONARIO AS F;
+
+SELECT * FROM FUNCIONARIO;
+
+-- WHERE
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Pnome = 'João';
+
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Salario <= 30000;
+
+-- AND, OR e NOT
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Sexo = 'M' 
+AND F.Salario >= 30000; 
+
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Endereco LIKE '%São Paulo%'
+OR F.Endereco LIKE '%Curitiba%';
+
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE NOT F.Endereco LIKE '%São Paulo%';
+
+-- ORDER BY
+SELECT *
+FROM FUNCIONARIO AS F
+ORDER BY F.Salario DESC;
+
+-- Valores NULL
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Cpf_supervisor IS NULL;
+
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Cpf_supervisor IS NOT NULL;
+
+-- SELECT TOP
+SELECT TOP 3 *
+FROM FUNCIONARIO AS F
+ORDER BY Salario DESC;
+
+-- MIN() e MAX()
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Salario = (SELECT MIN(F.Salario)
+				  FROM FUNCIONARIO AS F);
+
+-- DECLARE
+DECLARE @salario_min DECIMAL(10,2);
+
+/*
+SELECT @salario_min = (SELECT MIN(F.Salario)
+					  FROM FUNCIONARIO AS F);
+*/
+SET @salario_min = (SELECT MAX(F.Salario)
+					FROM FUNCIONARIO AS F);
+
+PRINT @salario_min;
+
+SELECT *
+FROM FUNCIONARIO AS F 
+WHERE F.Salario = @salario_min;
+
+-- COUNT()
+SELECT 
+	(SELECT COUNT(*) FROM FUNCIONARIO) AS Nr_Funcionarios,
+	(SELECT COUNT(*) FROM DEPENDENTE) AS Nr_Dependentes,
+	(SELECT COUNT(*) FROM FUNCIONARIO) +
+	(SELECT COUNT(*) FROM DEPENDENTE) AS total;
+
+DECLARE @nr_funcionarios INT;
+DECLARE @nr_dependentes INT;
+
+SET @nr_funcionarios = (SELECT COUNT(*) FROM FUNCIONARIO);
+SET @nr_dependentes = (SELECT COUNT(*) FROM DEPENDENTE);
+PRINT @nr_funcionarios + @nr_dependentes;
+
+SELECT @nr_funcionarios + @nr_dependentes AS total;
+
+-- AVG()
+SELECT AVG(F.Salario) AS Media_Salarial
+FROM FUNCIONARIO AS F;
+
+DECLARE @menor_salario DECIMAL(10,2)
+DECLARE @media_salario DECIMAL(10,2)
+
+SET @menor_salario = (SELECT MIN(Salario) FROM FUNCIONARIO);
+SET @media_salario = (SELECT AVG(Salario) FROM FUNCIONARIO);
+
+PRINT @media_salario - @menor_salario;
+
+SELECT @media_salario - @menor_salario AS desvio;
+
+-- SUM()
+SELECT SUM(F.Salario) AS Custo_Mensal
+FROM FUNCIONARIO AS F;
+
+-- LIKE
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Datanasc LIKE '__72%';
+
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE YEAR(F.Datanasc) LIKE '__72';
+
+-- IN
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Salario IN (25000, 30000);
+
+SELECT F.Pnome, TE.*
+FROM FUNCIONARIO AS F
+JOIN TRABALHA_EM AS TE ON F.Cpf = TE.Fcpf
+
+/*
+SELECT F.Pnome, TE.*
+FROM FUNCIONARIO AS F, TRABALHA_EM AS TE
+WHERE F.Cpf = TE.Fcpf;
+*/
+
+DECLARE @cpf_fernando CHAR(11)
+SET @cpf_fernando = (SELECT F.Cpf FROM FUNCIONARIO AS F 
+					WHERE F.Pnome = 'Fernando');
+
+SELECT F.Pnome, TE.*
+FROM FUNCIONARIO AS F
+JOIN TRABALHA_EM AS TE ON F.Cpf = TE.Fcpf
+WHERE TE.Pnr IN (SELECT Pnr FROM TRABALHA_EM
+				WHERE Fcpf = @cpf_fernando)
+AND TE.Horas IN (SELECT Horas FROM TRABALHA_EM
+				WHERE Fcpf = @cpf_fernando)
+AND NOT F.Pnome = 'Fernando';
+
+-- BETWEEN
+SELECT *
+FROM FUNCIONARIO AS F
+WHERE F.Salario BETWEEN 30000 AND 40000;
