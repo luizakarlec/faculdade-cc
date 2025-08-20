@@ -1,26 +1,35 @@
 package pkg;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.FileReader;
+import java.io.BufferedReader;
 
-public class Principal {
-	public static void main(String[] args) {
-		List<String> lista = new ArrayList<>();
-		Arquivo arquivo = new Arquivo("numeros");
-		lista = arquivo.leArquivo();
-		
-		System.out.println("Lista de numeros:");
-		for(String l : lista) {
-			System.out.println(l);
+public class Arquivo {
+	private FileReader arqr;
+	private BufferedReader leitor;
+	private List<String> lista;
+	public String nomeArquivo;
+	
+	public Arquivo(String nomeArquivo) {
+		this.nomeArquivo = nomeArquivo;
+		lista = new ArrayList<>();
+	}
+	
+	public List<String> leArquivo() {
+		try {
+			arqr = new FileReader (nomeArquivo+".txt");
+			leitor = new BufferedReader(arqr);
+			String linha;
+			while((linha = leitor.readLine()) != null) {
+				lista.add(linha);
+			}
+			leitor.close();
+			arqr.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		
-		List<String> lista2 = new ArrayList<>();
-		Arquivo arquivo2 = new Arquivo("palavras");
-		lista2 = arquivo2.leArquivo();
-		
-		System.out.println("\nLista de palavras:");
-		for(String l : lista2) {
-			System.out.println(l);
-		}
+		return lista;
 	}
 }
