@@ -6,3 +6,5 @@ output/
 
 # Ignorar arquivos de classe
 *.class
+/4-semestre/laboratorio de desenvolvimento de software/PROJETOS/CadastroAlunos/nbproject/private/
+/4-semestre/laboratorio de desenvolvimento de software/PROJETOS/CadastroAlunos/build/
