@@ -23,7 +23,7 @@ public class Principal {
 		listaPalavrasArquivo = Util.populaListaArquivo("palavras");
 		Util.exibirListaPalavras(listaPalavrasArquivo);
 		listaNumerosArquivo = Util.populaListaArquivo("numeros");
-		Util.exibirListaPalavras(listaPalavrasArquivo);
+		Util.exibirListaPalavras(listaNumerosArquivo);
 	}
 }
 
