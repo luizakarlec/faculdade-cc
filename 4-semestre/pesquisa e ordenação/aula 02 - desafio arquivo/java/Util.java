@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.FileReader; 
 import java.io.BufferedReader; 
+import java.util.Random;
 
 /***
  * classe responsável por métodos de gestão de listas de números inteiros e listas de palavras utilizando arquivos
@@ -67,7 +68,7 @@ public class Util {
         }
     }
 	
-	public List<String> populaListaArquivo(String nomeArquivo) {
+	public static List<String> populaListaArquivo(String nomeArquivo) {
 		List<String> lista = new ArrayList<>();
 		FileReader arqr;
 		BufferedReader leitor;
