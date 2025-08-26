@@ -20,9 +20,9 @@ public class Principal {
 		ArrayList<String> listaPalavrasArquivo = new ArrayList<>();
 		ArrayList<String> listaNumerosArquivo = new ArrayList<>();
 
-		listaPalavrasArquivo = Util.("palavras");
+		listaPalavrasArquivo = Util.populaListaArquivo("palavras");
 		Util.exibirListaPalavras(listaPalavrasArquivo);
-		listaNumerosArquivo = Util.("numeros");
+		listaNumerosArquivo = Util.populaListaArquivo("numeros");
 		Util.exibirListaPalavras(listaPalavrasArquivo);
 	}
 }
