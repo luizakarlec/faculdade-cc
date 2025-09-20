@@ -1,0 +1,1 @@
+-- 10. Crie uma procedure para contar o número de livros em cada categoria.CREATE PROCEDURE usp_ContarLivrosASBEGIN	SELECT COUNT(*) AS Quantidade, C.tipo_categoria	FROM Livro AS L	INNER JOIN Categoria AS C	ON L.fk_categoria = C.id	GROUP BY C.tipo_categoriaENDEXEC usp_ContarLivros;

@@ -1,0 +1,1 @@
+-- 5. Crie uma procedure que receba o nome de uma categoria e retorne todos os livros dentro dessa categoria.CREATE PROCEDURE usp_LivrosCategoria (@tipo_categoria VARCHAR(50))ASBEGIN	SELECT *	FROM Livro AS L	INNER JOIN Categoria AS C	ON C.id = L.fk_categoria	WHERE C.tipo_categoria = @tipo_categoriaENDEXEC usp_LivrosCategoria 'Humor';

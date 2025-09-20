@@ -1,0 +1,1 @@
+-- 8. Implemente uma procedure para listar os livros publicados por uma editora específica.CREATE PROCEDURE usp_LivrosEditora (@editora VARCHAR(100))ASBEGIN	SELECT L.isbn, L.titulo, L.ano, E.nome	FROM Livro AS L	INNER JOIN Editora AS E	ON L.fk_editora = E.id	WHERE E.nome = @editoraENDEXEC usp_LivrosEditora 'Rocco';

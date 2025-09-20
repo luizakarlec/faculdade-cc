@@ -1,0 +1,1 @@
+-- 2. Crie uma procedure para atualizar os detalhes de um livro (por exemplo, título, ano) pelo ISBN.CREATE PROCEDURE usp_DetalhesLivro (@isbn VARCHAR(50))ASBEGIN	SELECT *	FROM Livro AS L	WHERE L.isbn = @isbnENDEXEC usp_DetalhesLivro '8532511015';

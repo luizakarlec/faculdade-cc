@@ -1,0 +1,1 @@
+-- 1. Crie uma procedure que permita inserir uma nova categoria na tabela "Categoria".CREATE PROCEDURE usp_InserirCategoria    @tipo_categoria VARCHAR(50)ASBEGIN     insert into categoria (tipo_categoria) values (@tipo_categoria);ENDEXEC usp_InserirCategoria 'Categoria Nova';

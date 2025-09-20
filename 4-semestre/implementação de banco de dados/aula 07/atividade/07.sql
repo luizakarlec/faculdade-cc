@@ -1,0 +1,1 @@
+-- 7. Crie uma procedure que liste os livros publicados em um ano específico.CREATE PROCEDURE usp_LivroAno (@ano INT)ASBEGIN	SELECT * 	FROM LIVRO AS L	WHERE L.ano = @anoENDEXEC usp_LivroAno 2000;

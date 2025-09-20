@@ -1,0 +1,1 @@
+-- 3. Desenvolva uma procedure para adicionar um novo autor à tabela "Autor".CREATE PROCEDURE usp_InserirAutor    @nome VARCHAR(100),    @nacionalidade VARCHAR(50)ASBEGIN     insert into autor (nome, nacionalidade) values (@nome, @nacionalidade);ENDEXEC usp_InserirAutor 'Luiza', 'Brasileira';
