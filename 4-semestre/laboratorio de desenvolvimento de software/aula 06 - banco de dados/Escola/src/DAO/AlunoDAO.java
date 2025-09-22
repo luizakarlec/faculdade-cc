@@ -8,6 +8,8 @@ import beans.Aluno;
 import conexao.Conexao;
 import java.sql.Connection;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -85,4 +87,28 @@ public class AlunoDAO {
                 System.out.println("Erro ao excluir: "+ex.getMessage());
             }
     }
+    
+    public List<Aluno> getAlunosNome(String nome){
+        String sql = "SELECT * FROM alunos WHERE nome LIKE ?";
+        try{
+            PreparedStatement stmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            stmt.setString(1, "%"+ nome +"%");
+            ResultSet rs = stmt.executeQuery();
+            List<Aluno> listaAlunos = new ArrayList();
+            
+            while(rs.next()){
+                Aluno a = new Aluno();
+                a.setId(rs.getInt("id"));
+                a.setNome(rs.getString("nome"));
+                a.setIdade(rs.getInt("idade"));
+                a.setCurso(rs.getString("curso"));
+                listaAlunos.add(a);
+            }
+            return listaAlunos;
+        } catch (SQLException ex) {
+            System.out.println("Erro ao consultar alunos: "+ex.getMessage());
+            return null;
+        }
+    }
+
 }

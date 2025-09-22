@@ -16,7 +16,10 @@ public class Conexao {
     public Connection getConexao(){
         try {
             Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/escola?useTimeZone=true&serverTimeZone=UTC", "root", "laboratorio");
+                "jdbc:mysql://localhost:3306/escola?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true",
+                "root",
+                "laboratorio"
+            );
             System.out.println("Conexao efetuada!");
             return conn;
         } catch (SQLException ex) {

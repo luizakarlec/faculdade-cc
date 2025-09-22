@@ -40,7 +40,7 @@ public class AdicionarAluno extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnAdicionar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Nome:");
 
