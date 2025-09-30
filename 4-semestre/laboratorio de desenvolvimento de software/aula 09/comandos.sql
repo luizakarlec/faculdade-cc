@@ -23,7 +23,7 @@ VALUES
  ("Jostein", "M", "Alemão"),
  ("Stephen", "M", "Holandês");
 
-mysql> CREATE TABLE veiculo(
+CREATE TABLE veiculo(
 id int AUTO_INCREMENT PRIMARY KEY,
 modelo varchar(30),
 placa varchar(7),
