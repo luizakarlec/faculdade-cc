@@ -35,7 +35,7 @@ public class CategoriaDAO {
 
             rs.first();
             c.setId(id);
-            c.setNome("nome");
+            c.setNome(rs.getString("nome"));
             return c;
             
         } catch (SQLException ex) {
