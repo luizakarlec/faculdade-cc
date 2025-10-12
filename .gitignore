@@ -12,3 +12,6 @@ output/
 /4-semestre/laboratorio de desenvolvimento de software/aula 06 - banco de dados/Escola/build/
 /4-semestre/laboratorio de desenvolvimento de software/aula 06 - banco de dados/Produto/nbproject/private/
 /4-semestre/laboratorio de desenvolvimento de software/aula 10/Produto/build/
+
+# Ignorar arquivos form
+*.form
