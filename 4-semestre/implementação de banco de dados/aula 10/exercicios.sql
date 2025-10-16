@@ -13,22 +13,42 @@ desfazendo o segundo). Entregável: Evidencie que apenas o primeiro persiste após
 Tarefa: Inicie transação, atualize o endereço de um funcionário específico, conferir 
 a alteração e então decidir entre COMMIT ou ROLLBACK com base na conferência.
 Entregável: Registre a decisão e o estado final do registro.
+*/
 
-4. SAVEPOINT antes de UPDATE em Massa 
-Tarefa: Em uma transação, crie um SAVEPOINT e aplique um reajuste salarial (ex.: +2%) 
-para um departamento. Avalie o impacto (média e quantidade). Caso o efeito não seja 
-desejado, ROLLBACK para o savepoint; caso contrário, COMMIT. 
-Entregável: Relatório curto do antes/depois e a decisão tomada.
+-- 1
+INSERT INTO DEPARTAMENTO (Dnome, Dnumero) VALUES ('Departamento1', 9);
 
-5. Operação Composta: INSERT + UPDATE (Tudo-ou-Nada) 
-Tarefa: Em uma única transação, crie um novo departamento e realoque um funcionário 
-para esse departamento. Ao final, decida entre COMMIT ou ROLLBACK (tudo deve persistir ou nada). 
-Entregável: Comprove atomicidade: se desfizer, nem o depto novo nem a realocação devem permanecer.
+BEGIN TRAN;
+INSERT INTO DEPARTAMENTO (Dnome, Dnumero) VALUES ('Departamento2', 10);
+ROLLBACK TRAN;
 
-6. Tratamento de Erros com TRY…CATCH e XACT_STATE() 
-Tarefa: Dentro de uma transação, faça um UPDATE válido e, em seguida, provoque um 
-erro (por ex., atualizar uma coluna inexistente). Trate o erro com TRY…CATCH e decida 
-COMMIT/ROLLBACK conforme XACT_STATE(). 
-Entregável: Explique quando XACT_STATE retorna 1 ou -1 e o que isso implica para a recuperação.
-/*
+SELECT * FROM DEPARTAMENTO;
+-- Apenas a primeira primeira linha permaneceu pois o ROLLBACK desfaz tudo dentro da transação explícita
 
+-- 2
+BEGIN TRAN;
+INSERT INTO DEPARTAMENTO (Dnome, Dnumero) VALUES ('Departamento3', 11);
+SAVE TRAN dpt;
+INSERT INTO DEPARTAMENTO (Dnome, Dnumero) VALUES ('Departamento4', 12);
+ROLLBACK TRAN dpt;
+COMMIT TRANSACTION;
+
+SELECT * FROM DEPARTAMENTO; -- 'Departamento2' nãõ foi inserido pois estava abaixo do SAVEPOINT
+
+-- 3
+BEGIN TRAN;
+DECLARE @registroAfetado INT = 0;
+
+UPDATE FUNCIONARIO SET Endereco ='Santa Maria, RS' WHERE Cpf = '12312312311';
+SET @registroAfetado = @@ROWCOUNT + @registroAfetado
+
+IF @registroAfetado <> 1
+BEGIN
+	ROLLBACK TRAN;
+	PRINT 'Alteração não realizada'
+END;
+ELSE
+BEGIN
+	COMMIT TRANSACTION;
+	PRINT 'Alteração realizada!'
+END;
