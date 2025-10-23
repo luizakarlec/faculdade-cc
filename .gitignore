@@ -15,3 +15,4 @@ output/
 
 # Ignorar arquivos form
 *.form
+/4-semestre/pesquisa e ordenação/TrabalhoOrdenacao/build/
