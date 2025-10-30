@@ -1,0 +1,19 @@
+create database faculdade;
+
+use faculdade;
+
+CREATE TABLE professores(
+	id int AUTO_INCREMENT PRIMARY KEY,
+	nome varchar(60),
+	email varchar(80) UNIQUE
+);
+
+CREATE TABLE disciplinas(
+	id int AUTO_INCREMENT PRIMARY KEY,
+	nome varchar(80),
+	carga_horaria int,
+	professor_id int NOT NULL,
+	foreign key(professor_id) references professores(id)
+);
+
+

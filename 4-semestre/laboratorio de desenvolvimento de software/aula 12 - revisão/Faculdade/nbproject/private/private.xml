@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/Menu.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/EditarExcluirDisciplina.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/InserirDisciplina.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/EditarExcluirProfessor.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/InserirProfessor.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/RelatorioDisciplinas.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/RelatorioProfessores.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/servidor/Servidor.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/faculdade/Faculdade.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/servidor/ThreadServer.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/DAO/DisciplinaDAO.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/DAO/ProfessorDAO.java</file>
+            <file>file:/C:/Users/luiza/Desktop/Faculdade/src/beans/Professor.java</file>
+        </group>
+    </open-files>
+</project-private>
