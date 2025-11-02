@@ -1,0 +1,10 @@
+create database prova;
+
+use prova;
+
+CREATE TABLE produtos(
+	id int AUTO_INCREMENT PRIMARY KEY,
+	nome varchar(60) NOT NULL,
+	preco decimal(10,20),
+	saldo int
+);
