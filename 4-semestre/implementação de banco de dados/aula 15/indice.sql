@@ -13,7 +13,7 @@ DECLARE @json NVARCHAR(MAX);
 
 SELECT @json = BulkColumn
 FROM OPENROWSET(
-	BULK 'C:\Users\laboratorio\Downloads\generated.json', -- local do arquivo (4devs ou json generator)
+	BULK 'C:\Users\laboratorio\Downloads\data.json', -- local do arquivo (4devs ou json generator)
 	SINGLE_NCLOB -- SINGLE_CLOB -> SINGLE_NCLOB -- mudar formato do arquivo para UTF-16
 ) AS J;
 
